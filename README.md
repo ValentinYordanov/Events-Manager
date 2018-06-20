@@ -9,3 +9,5 @@ You can:
 
 Events are stored in text files in a folder of your choice.
 
+To start the program - just run main.
+
