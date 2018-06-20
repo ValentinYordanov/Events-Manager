@@ -9,7 +9,11 @@ public class View {
 
     private EventManager manager;
 
-    public View(EventManager manager) {
+    public View() {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the directory you want to store the events in");
+        EventManager manager = new EventManager(Paths.get(sc.nextLine()));
         this.manager = manager;
     }
 
@@ -66,8 +70,7 @@ public class View {
 
     public static void main(String[] args) {
 
-        EventManager manager = new EventManager(Paths.get("Path\\To\\Events"));
-        View view = new View(manager);
+        View view = new View();
 
         view.start();
 
